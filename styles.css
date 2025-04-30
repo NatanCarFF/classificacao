@@ -1,0 +1,187 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Fundo tecnológico */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.6s forwards;
+    color: #e0e0e0;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #00bcd4;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+#search-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #00bcd4;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+#search-box:focus {
+    border-color: #00e5ff;
+    background-color: #2b2b2b;
+}
+
+button, label {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover, label:hover {
+    background-color: #00acc1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInTable 0.8s ease-in-out;
+}
+
+@keyframes fadeInTable {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    word-break: break-word;
+}
+
+table th {
+    background-color: #00bcd4;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+}
+
+.nome-item {
+    max-width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: left;
+    width: 50%; /* Aumenta a largura do campo de texto */
+}
+
+.nota-item {
+    width: 80px;
+    text-align: center;
+}
+
+.acoes {
+    width: 120px;
+    white-space: nowrap;
+}
+
+table td img {
+    max-width: 50px;
+    max-height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+table td img:hover {
+    transform: scale(1.1);
+}
+
+table tr:hover {
+    background-color: rgba(0, 188, 212, 0.1);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.btn-importar {
+    background-color: #0097a7;
+}
+
+.btn-importar:hover {
+    background-color: #00838f;
+}
+
+/* Impede a quebra no cabeçalho "Nota" */
+table th.nota-header {
+    white-space: nowrap;
+}
